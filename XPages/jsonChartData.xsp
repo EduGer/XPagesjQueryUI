@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
+	<xp:this.resources>
+		<xp:script src="/xpChart.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+
+
+	<xp:this.afterRenderResponse><![CDATA[#{javascript:var exCon = facesContext.getExternalContext(); 
+var writer = facesContext.getResponseWriter();
+var response = exCon.getResponse();
+response.setContentType("application/json");
+response.setHeader("Cache-Control", "no-cache");
+
+writer.write(getChartData());
+
+writer.endDocument();
+facesContext.responseComplete();}]]></xp:this.afterRenderResponse>
+</xp:view>

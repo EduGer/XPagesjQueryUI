@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="Contact"></xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:script src="/jquery.ui.menu.js" clientSide="true"></xp:script>
+		<xp:script src="/jquery.ui.autocomplete.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxexpander.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxvalidator.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxbuttons.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxcheckbox.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/globalization/globalize.js"
+			clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxcalendar.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxdatetimeinput.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxmaskedinput.js" clientSide="true"></xp:script>
+		<xp:script src="/contact.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<div id="contactform">
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="First name:" id="firstName_Label1" for="firstName1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.FirstName}" id="firstName1"
+						styleClass="firstname text-input">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Last name:" id="lastName_Label1" for="lastName1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.LastName}" id="lastName1"
+						styleClass="lastname text-input">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Company:" id="companylabel" for="company"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText id="company" value="#{document1.Company}"
+						styleClass="companyfield text-input"></xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Country:" id="country_Label1" for="country1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:comboBox value="#{document1.Country}" id="country1">
+						<xp:selectItems id="selectItems1">
+							<xp:this.value><![CDATA[#{javascript:var list = @Unique(@DbColumn(@DbName(), "Contacts By First Name", 3));
+list.push("Germany");
+list.push("Sweden");
+list.push("Belgium");
+list.push("Australia");
+list.push("Canada");
+list.sort();
+return list;}]]></xp:this.value>
+						</xp:selectItems>
+					</xp:comboBox>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Date of birth:" id="dateOfBirth_Label1"
+						for="dateOfBirth1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<div id='dateofbirth'>
+					</div>
+					<xp:inputText value="#{document1.DateOfBirth}" id="dateOfBirth1"
+						styleClass="dateofbirth" style="display: none;">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Telephone:" id="telephone_Label1" for="telephone1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.Telephone}" id="telephone1"
+						styleClass="telephone text-input" type="tel">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Email:" id="email_Label1" for="email1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.Email}" id="email1"
+						styleClass="email text-input" type="email">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Twitter:" id="twitter_Label1" for="twitter1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.Twitter}" id="twitter1"
+						styleClass="twitter text-input">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td></xp:td>
+				<xp:td>
+					<div class="status"></div>
+					<xp:button value="Submit" id="button1" styleClass="submitbutton">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="false"
+							id="eventHandler1">
+							<xp:this.action>
+								<xp:actionGroup>
+									<xp:saveDocument var="document1"></xp:saveDocument>
+									<xp:openPage name="/home.xsp"></xp:openPage>
+								</xp:actionGroup>
+							</xp:this.action>
+							<xp:this.script><![CDATA[return $('#contactform').jqxValidator('validate');]]></xp:this.script>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+	</div>
+</xp:view>

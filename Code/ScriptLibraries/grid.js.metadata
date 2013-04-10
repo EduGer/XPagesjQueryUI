@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="filter" replicaid="80257B3C004225BD" version="9.0">
+<noteinfo noteid="2c52" sequence="24" unid="0777E92676AF129B80257B3C004960C6">
+<created><datetime>20130328T132129,02+00</datetime></created>
+<modified><datetime>20130328T141119,08+00</datetime></modified>
+<revised><datetime>20130328T141119,07+00</datetime></revised>
+<lastaccessed><datetime>20130328T141119,08+00</datetime></lastaccessed>
+<addedtofile><datetime>20130328T132129,04+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>grid.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+</note>

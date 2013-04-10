@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/jqwidgets/jqxchart.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxdata.js" clientSide="true"></xp:script>
+		<xp:script src="/chart.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
+	<div id='host' style="margin: 0 auto; width: 699px; height: 400px;">
+        <div id='jqxChart' style="width: 680px; height: 400px; position: relative; left: 0px;
+            top: 0px;">
+        </div>
+    </div>
+</xp:view>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/jqwidgets/jqxdata.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxbuttons.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxscrollbar.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxmenu.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxcheckbox.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxlistbox.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxdropdownlist.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.sort.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.filter.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.grouping.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.pager.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.selection.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxgrid.edit.js" clientSide="true"></xp:script>
+		<xp:script src="/grid.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
+	<div id="jqxgrid">
+	</div>
+
+</xp:view>

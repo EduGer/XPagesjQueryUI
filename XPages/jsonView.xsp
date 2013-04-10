@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="true"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:restService id="restService1" pathInfo="getRows">
+		<xe:this.service>
+			<xe:viewJsonService viewName="Contacts By First Name"
+				contentType="application/json" defaultColumns="true" count="500">
+			</xe:viewJsonService>
+		</xe:this.service>
+	</xe:restService>
+</xp:view>

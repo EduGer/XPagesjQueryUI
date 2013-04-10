@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:script src="/scripts/jquery-1.8.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/jquery.ui.core.js" clientSide="true"></xp:script>
+		<xp:script src="/jquery.ui.widget.js" clientSide="true"></xp:script>
+		<xp:script src="/jquery.ui.position.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxcore.js" clientSide="true"></xp:script>
+		<xp:script src="/jqwidgets/jqxmenu.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/themes/base/jquery.ui.all.css"></xp:styleSheet>
+		<xp:styleSheet href="/jqwidgets/styles/jqx.base.css"></xp:styleSheet>
+		<xp:styleSheet href="/jqwidgets/styles/jqx.classic.css"></xp:styleSheet>
+		<xp:script src="/common.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
+	<ul id="menu">
+		<ul>
+			<li>
+				Contacts
+				<ul style='width: 250px;'>
+					<li>
+						<xp:link escape="true" text="Grid" id="link1"
+							value="/home.xsp">
+						</xp:link>
+					</li>
+					<li>
+						<xp:link escape="true" text="By Country" id="link2"
+							value="/country.xsp">
+						</xp:link>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<xp:link escape="true" text="New Contact" id="link3"
+					value="/contact.xsp">
+				</xp:link>
+			</li>
+		</ul>
+	</ul>
+		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+
+</xp:view>
